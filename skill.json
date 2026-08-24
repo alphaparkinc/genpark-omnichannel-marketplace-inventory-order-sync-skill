@@ -1,0 +1,38 @@
+{
+  "name": "genpark-omnichannel-marketplace-inventory-order-sync-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Omnichannel multi-marketplace inventory and order synchronizer preventing overselling across Shopee, Tokopedia, TikTok Shop, and Shopify.",
+  "author": "genpark",
+  "category": "ecommerce",
+  "tags": [
+    "omnichannel-sync",
+    "marketplace-integrator",
+    "inventory-lock",
+    "order-management",
+    "sirclo"
+  ],
+  "inputs": {
+    "central_sku": {
+      "type": "string"
+    },
+    "updated_stock": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "sync_batch_id": {
+      "type": "string"
+    },
+    "broadcast_stock_level": {
+      "type": "integer"
+    },
+    "synchronized_channels_count": {
+      "type": "integer"
+    },
+    "oversell_prevention_lock_acquired": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
